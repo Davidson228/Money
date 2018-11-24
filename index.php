@@ -28,7 +28,7 @@ $form2->onSubmit(function($form2) use ($clients) {
     return new \atk4\ui\jsExpression('document.location="main.php"');
   } else {
     $clients->unload();
-    $er = (new \atk4\ui\jsNotify('No such user.'));
+    $er = new \atk4\ui\jsNotify('No such user.');
     $er->setColor('red');
   }
 });
