@@ -2,7 +2,7 @@
 require 'connection.php';
 
 $guests = new Guests($db);
-$guests -> load($_SESSION['user_id']);
+$guests -> load($_GET['guests_id']);
 
 /*$crud = $app->layout->add('CRUD');
 $crud->setModel(new Guests($db));
