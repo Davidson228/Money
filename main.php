@@ -18,6 +18,8 @@ $form->onSubmit(function($form) {
 $client = new Clients($db);
 $client -> load($_SESSION['user_id']);
 
-$client->addDecorator('name', new \atk4\ui\TableColumn\Link('table.php?guests_id={$id}'));
+
 $crud = $app->layout->add('CRUD');
+
+$crud->addDecorator('name', new \atk4\ui\TableColumn\Link('table.php?guests_id={$id}'));
 $crud->setModel(new Clients($db));
