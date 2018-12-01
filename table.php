@@ -1,6 +1,8 @@
 <?php
-require 'vendor/autoload.php';
 require 'connection.php';
+
+$app = new \atk4\ui\App('Credits');
+$app->initLayout('Centered');
 
 $guests = new Guests($db);
 $guests -> load($_GET['guests_id']);
