@@ -1,4 +1,5 @@
 <?php
+require 'vendor/autoload.php';
 require 'connection.php';
 
 $guests = new Guests($db);
