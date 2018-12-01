@@ -4,7 +4,7 @@ require 'connection.php';
 $app = new \atk4\ui\App('Credits');
 $app->initLayout('Centered');
 
-$guests = new Clients($db);
+$guests = new Guests($db);
 $guests -> load($_GET['guests_id']);
 
 /*$crud = $app->layout->add('CRUD');

@@ -15,11 +15,12 @@ $form->onSubmit(function($form) {
 
 });*/
 //$layout->Add['ui'=>'hidden divider'];
-$client = new Clients($db);
+$client = new Client($db);
 $client -> load($_SESSION['user_id']);
 
+$guests =  $client->ref('Guests');
 
 $crud = $app->layout->add('CRUD');
-$crud->setModel(new Clients($db));
+$crud->setModel($guests);
 
 $crud->addDecorator('name', new \atk4\ui\TableColumn\Link('table.php?guests_id={$id}'));
