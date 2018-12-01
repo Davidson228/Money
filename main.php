@@ -15,7 +15,7 @@ $form->onSubmit(function($form) {
 
 });*/
 //$layout->Add['ui'=>'hidden divider'];
-$client = new Client($db);
+$client = new Clients($db);
 $client -> load($_SESSION['user_id']);
 
 $guests =  $client->ref('Guests');
